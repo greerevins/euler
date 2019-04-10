@@ -25,10 +25,25 @@ function isPrime(num) {
 }
 
 
-function euler7(){
-    let thePrimes=[]
-let theCount=13
-for(i=){
+function euler7(number) {
+    let thePrimes = []
+    let theCount = 1
+    while (thePrimes.length <= number) {
+        if (isPrime(theCount) === true) {
+            thePrimes.push(theCount)
 
+        }
+        theCount = theCount + 1
+    }
+
+    return thePrimes.slice(thePrimes.length - 1)
 }
-}
+
+
+
+
+console.time('someFunction');
+
+someFunction(); // Whatever is timed goes between the two "console.time"
+
+console.timeEnd('someFunction');
